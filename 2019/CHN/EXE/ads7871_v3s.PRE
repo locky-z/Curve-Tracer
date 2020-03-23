@@ -1,0 +1,484 @@
+[{ PNP }]
+[PNP Ic->Hfe(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=-0.5
+VMAX=-36
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.3
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+Note=恒定Vce测量hfe-Ic曲线是元件手册上的标准测量条件
+
+
+[PNP Vbe->Ic(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=-0.5
+VMAX=-36
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vbe->Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+Note=输入特征曲线，也称转移曲线，恒定Vce测量Vbe-Ic曲线是元件手册上的标准测量条件,
+
+[PNP Ic->Hfe(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=34.5
+VMAX=2.5
+VFIX1=2.5
+VFIX2=35
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+
+[PNP Vbe->Ic(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=34.5
+VMAX=2.5
+VFIX1=2.5
+VFIX2=35
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vbe->Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+
+[PNP Vce-Ic]
+RB=1
+RC=2
+MAINMODETYPE=0
+MODETYPE=2
+VMIN=0
+VMAX=-36
+VFIX1=-0.1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vce-Ic-%	-1	XAxis=U	YAxis=L	Vce=abs(Vce)	Ic=abs(Ic)	001010
+Note=是恒定Ib的一条输出曲线，如果需要显示一簇曲线，请修改基极电流值再多次测量。
+
+[{ NPN }]
+
+[NPN Ic->Hfe(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0.5
+VMAX=36
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+Note=恒定Vce测量hfe-Ic曲线是元件手册上的标准测量条件
+
+[NPN Vbe->Ic(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0.5
+VMAX=36
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vbe-Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+Note=输入特征曲线，也称转移曲线，恒定Vce测量Vbe-Ic曲线是元件手册上的标准测量条件,
+
+[NPN Ic->Hfe(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=2.5
+VMAX=35
+VFIX1=35
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+
+
+[NPN Vbe->Ic(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=3
+VMAX=36
+VFIX1=36
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vbe-Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+
+[NPN Vce-Ic]
+RB=1
+RC=2
+MAINMODETYPE=0
+MODETYPE=2
+VMIN=0
+VMAX=36
+VFIX1=0.1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vce-Ic-%	-1	XAxis=U	YAxis=L	Vce=abs(Vce)	Ic=abs(Ic)	001010
+Note=是恒定Ib的一条输出曲线，如果需要显示一簇曲线，请修改基极电流值再多次测量。
+
+[{ PMOS }]
+[PMOS Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0
+VMAX=-6
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+Note=输入特征曲线，也称转移曲线，恒定Vds测量Vgs-Id曲线是元件手册上的标准测量条件,
+
+[PMOS Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=35.5
+VMAX=30
+VFIX1=2.5
+VFIX2=36
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+
+[PMOS Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=-36
+VFIX1=-2.8
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=是恒定Vgs的一条输出曲线，如果需要显示一簇曲线，请修改栅极电压后再多次测量。
+
+[{ NMOS }]
+[NMOS Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0
+VMAX=6
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+Note=输入特征曲线，也称转移曲线，恒定Vds测量Vgs-Id曲线是元件手册上的标准测量条件,
+
+[NMOS Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=2.5
+VMAX=8
+VFIX1=36
+VFIX2=2.5
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+[NMOS Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=2.8
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=是恒定Vgs的一条输出曲线，如果需要显示一簇曲线，请修改栅极电压后再多次测量。
+
+[{P-JFET}]
+[P-JFET Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=5
+VMAX=-0.3
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=60
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+Note=输入特征曲线，也称转移曲线，恒定Vds测量Vgs-Id曲线是元件手册上的标准测量条件,
+
+[P-JFET Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=35
+VMAX=30.3
+VFIX1=2.5
+VFIX2=30
+VSTEP=0.1
+IMAX=600
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+
+[P-JFET Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=-36
+VFIX1=1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=60
+CurrentSwitch=0
+SeriesDefine0=P Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=是恒定Vgs的一条输出曲线，如果需要显示一簇曲线，请修改栅极电压后再多次测量。
+
+[{N-JFET}]
+[N-JFET Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=-5
+VMAX=0.3
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=30
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+Note=输入特征曲线，也称转移曲线，恒定Vds测量Vgs-Id曲线是元件手册上的标准测量条件,
+
+[N-JFET Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=2.5
+VMAX=7.3
+VFIX1=35
+VFIX2=7
+VSTEP=0.1
+IMAX=30
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+
+[N-JFET Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=-1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=是恒定Vgs的一条输出曲线，如果需要显示一簇曲线，请修改栅极电压后再多次测量。
+
+[{正稳压}]
+[78xxVi-Vo曲线]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=2
+VMIN=2.5
+VMAX=36
+VFIX1=2.5
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Vi-Vo-%	255	XAxis=U	YAxis=L	Vi=abs(Vbe)	Vo=abs(Vce-Vbe)	000000
+SeriesDefine1=Vi-Is右-%	0	XAxis=U	YAxis=R	Vi=abs(Vbe)	Is=abs(Ib)	000000
+Note=输入端接E,输出端接C,公共端接B，分别测量出Vi-Vo曲线和Vi->公共端静态电流曲线。如果需要改变负载电流，可以选择不同的RC,或者改变Vc电压。
+
+[78xx Io-Vo曲线]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=1
+VMIN=18
+VMAX=3
+VFIX1=3
+VFIX2=35
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Io-Vo-%	255	XAxis=U	YAxis=L	I=abs(Ic)	Vo=abs(Vce-Vbe)	000000
+Note=输入端接E,输出端接C,公共端接B。
+
+[{负稳压}]
+[79xxVi-Vo曲线]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=2
+VMIN=36
+VMAX=2.5
+VFIX1=36
+VFIX2=36
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Vi-Vo-%	255	XAxis=U	YAxis=L	Vi=abs(Vbe)	Vo=abs(Vce-Vbe)	001100
+Note=输入端接E,输出端接C,公共端接B，分别测量出Vi-Vo曲线和Vi->公共端静态电流曲线。如果需要改变负载电流，可以选择不同的RC,或者改变Vc电压。
+
+[79xx Io-Vo曲线]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=1
+VMIN=5
+VMAX=36
+VFIX1=25
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Io-Vo-%	255	XAxis=U	YAxis=L	I=abs(Ic)	Vo=abs(Vce-Vbe)	000000
+Note=输入端接E,输出端接C,公共端接B。
+
+[{两端器件}]
+[双向器件VI曲线]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=-18
+VMAX=18
+VFIX1=0
+VFIX2=2
+VSTEP=0.5
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=CE两端器件-%	-1	XAxis=U	YAxis=L	V=Vce	I=Ic	000000
+Note=不用分正负，分别接C E，但最大测量电压只有-18V～+18V。
+
+[稳压二极管VI曲线]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=0
+VFIX2=2
+VSTEP=0.5
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=CE两端器件-%	-1	XAxis=U	YAxis=L	V=Vce	I=Ic	000000
+Note=二极管C+ E-，最大测量范围为36V。
+
+[  二极管对数VI特性]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=0
+VFIX2=2
+VSTEP=0.5
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=二极管对数VI特性	-1	XAxis=U	YAxis=L	V=Vce	I=ln(abs(Ic))	000000
+Note=二极管C+ E-，Y轴的单位是电流的对数。
+
+
+[{特殊测量}]
+[  可控硅触发测试]
+RB=0
+RC=0
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=3
+VMAX=10
+VFIX1=30
+VFIX2=3
+VSTEP=0.1
+IMAX=20
+CurrentSwitch=0
+SeriesDefine0=可控硅触发测试	-1	XAxis=U	YAxis=L	V=Vbe	I=Ic	011000
+Note=阳极C，阴极E，控制极接一个1u以上电解(C+ 控制极-)。
+
+[正弦曲线]
+RB=3
+RC=3
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=0
+VMAX=2
+VFIX1=0.1
+VFIX2=0.1
+VSTEP=0.01
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=正弦曲线	-1	XAxis=U	YAxis=L	X=Number	Y=sin(6.28*Number/200)	000000
+Note=这是一个示范一曲线公式的用法
+[镜像->Ic跟随Ib情况]
+RB=1
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=4
+VMAX=36
+VFIX1=36
+VFIX2=2.5
+VSTEP=0.5
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=i	-1	XAxis=U	YAxis=L	I=Ib	Radio=Ib/Ic	001110
+Note=
