@@ -1,1 +1,13 @@
+Note:
+1. This version used two kinds of USB interface chips, PL2303 in the early stage and CH340 in the later version. Their corresponding USB drivers are:
+   PL2303_ Prolific_ DriverInstaller_ V1.5.0.exe
+   CH341 SER.exe
+Note that the driver of PL2303 can only use the version no higher than 1.5, and do not let windows update the driver automatically, because the updated PL2303 driver is not compatible with the PL2303 chip on the board.
 
+2. The circuit of version 2019 and earlier versions are basically the same, so the execute file is the same. But the component layout and ADC and DAC channels are adjusted, so the configuration file "ads7871_v3s.ini" is different.
+  The configuration file "ads7871_v3s.ini" in this folder is only available for earlier versions, not for 2019 version. And this configuration file is a general parameter file, so a calibration operation is needed to update the calibration parameters into configuration file. Please refer to the software manual of 2019 version for the calibration steps. 
+  You can also email me the number of the curve tracer ("XXX" is written on the ceramic resistor or the bottom of the shell).
+
+3. My email is:
+247954833@qq.com
+lockyz@yahoo.com
