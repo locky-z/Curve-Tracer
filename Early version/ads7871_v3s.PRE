@@ -1,0 +1,470 @@
+[{ PNP }]
+[  PNP Ic->Hfe(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=-0.5
+VMAX=-36
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.3
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+Note=Constant Vce measurement hfe-Ic curve is the standard measurement conditions on the component manual
+
+
+[  PNP Vbe->Ic(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=-0.5
+VMAX=-36
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vbe->Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+Note=The input characteristic curve, also known as the transfer curve, constant Vce measurement of a Vbe-Ic curve is the standard measurement conditions on the component manual,
+
+[  PNP Ic->Hfe(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=34.5
+VMAX=2.5
+VFIX1=2.5
+VFIX2=35
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+
+[  PNP Vbe->Ic(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=34.5
+VMAX=2.5
+VFIX1=2.5
+VFIX2=35
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vbe->Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+
+[  PNP Vce-Ic]
+RB=1
+RC=2
+MAINMODETYPE=0
+MODETYPE=2
+VMIN=0
+VMAX=-36
+VFIX1=-0.1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vce-Ic-%	-1	XAxis=U	YAxis=L	Vce=abs(Vce)	Ic=abs(Ic)	001010
+Note=Constant Ib output curve, if you need to display a bunch of curves, modify the value of the base current to multiple measurements.
+
+[{ NPN }]
+
+[NPN Ic->Hfe(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0.5
+VMAX=36
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+Note=Constant Vce measurement hfe-Ic curve is the standard measurement conditions on the component manual
+
+[  NPN Vbe->Ic(Fix Vce)]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0.5
+VMAX=36
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vbe-Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+Note=The input characteristic curve, also known as the transfer curve, constant Vce measurement of a Vbe-Ic curve is the standard measurement conditions on the component manual,
+
+[  NPN Ic->Hfe(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=2.5
+VMAX=35
+VFIX1=35
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
+
+
+[  NPN Vbe->Ic(Vce No Fix)]
+RB=3
+RC=2
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=3
+VMAX=36
+VFIX1=36
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vbe-Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
+
+[  NPN Vce-Ic]
+RB=1
+RC=2
+MAINMODETYPE=0
+MODETYPE=2
+VMIN=0
+VMAX=36
+VFIX1=0.1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vce-Ic-%	-1	XAxis=U	YAxis=L	Vce=abs(Vce)	Ic=abs(Ic)	001010
+Note=Constant Ib output curve, if you need to display a bunch of curves, modify the value of the base current to multiple measurements.
+
+[{ PMOS }]
+[  PMOS Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0
+VMAX=-6
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+Note=The input characteristic curve, also known as the transfer curve, constant Vce measurement of a Vgs-Id curve is the standard measurement conditions on the component manual,
+
+[  PMOS Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=35.5
+VMAX=30
+VFIX1=2.5
+VFIX2=36
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+
+[  PMOS Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=-36
+VFIX1=-2.8
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=P Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=Constant Vgs output curve, if you need to display a bunch of curves, modify the value of the grid voltage to multiple measurements.
+
+[{ NMOS }]
+[  NMOS Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=0
+VMAX=6
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+Note=The input characteristic curve, also known as the transfer curve, constant Vce measurement of a Vgs-Id curve is the standard measurement conditions on the component manual,
+
+[  NMOS Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=2.5
+VMAX=8
+VFIX1=36
+VFIX2=2.5
+VSTEP=0.1
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
+[  NMOS Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=2.8
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=Constant Vgs output curve, if you need to display a bunch of curves, modify the value of the grid voltage to multiple measurements.
+
+[{P-JFET}]
+[  P-JFET Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=5
+VMAX=-0.3
+VFIX1=-10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=60
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+Note=The input characteristic curve, also known as the transfer curve, constant Vce measurement of a Vgs-Id curve is the standard measurement conditions on the component manual,
+
+[  P-JFET Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=35
+VMAX=30.3
+VFIX1=2.5
+VFIX2=30
+VSTEP=0.1
+IMAX=600
+CurrentSwitch=0
+SeriesDefine0=P Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+
+[  P-JFET Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=-36
+VFIX1=1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=60
+CurrentSwitch=0
+SeriesDefine0=P Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=Constant Vgs output curve, if you need to display a bunch of curves, modify the value of the grid voltage to multiple measurements.
+
+[{N-JFET}]
+[  N-JFET Vgs-Id(Fix Vce)]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=0
+VMIN=-5
+VMAX=0.3
+VFIX1=10
+VFIX2=2.5
+VSTEP=0.1
+IMAX=30
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+Note=The input characteristic curve, also known as the transfer curve, constant Vce measurement of a Vgs-Id curve is the standard measurement conditions on the component manual,
+
+[  N-JFET Vgs-Id(Vce No Fix)]
+RB=1
+RC=1
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=2.5
+VMAX=7.3
+VFIX1=35
+VFIX2=7
+VSTEP=0.1
+IMAX=30
+CurrentSwitch=0
+SeriesDefine0=N Vgs->Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
+
+[  N-JFET Vds-Id]
+RB=1
+RC=1
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=-1
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=N Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
+Note=Constant Vgs output curve, if you need to display a bunch of curves, modify the value of the grid voltage to multiple measurements.
+
+[{Positive Regulator}]
+[  78xx Vi-Vo Curve]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=2
+VMIN=2.5
+VMAX=36
+VFIX1=2.5
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Vi-Vo-%	255	XAxis=U	YAxis=L	Vi=abs(Vbe)	Vo=abs(Vce-Vbe)	000000
+SeriesDefine1=Vi-Is-%	0	XAxis=U	YAxis=R	Vi=abs(Vbe)	Is=abs(Ib)	000000
+Note=Vin connect E,Vout connect C,GND connect B.Were used to measure the curve of Vi-Vo and Vi->quiescent current curve. If you need to change the load current, you can choose the different RC, or change the Vc voltage.
+
+[  78xx Io-Vo Curve]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=1
+VMIN=18
+VMAX=3
+VFIX1=3
+VFIX2=35
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Io-Vo-%	255	XAxis=U	YAxis=L	I=abs(Ic)	Vo=abs(Vce-Vbe)	000000
+Note=Vin connect E,Vout connect C,GND connect B.
+
+[{Negative regulator}]
+[  79xxVi-Vo Curve]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=2
+VMIN=36
+VMAX=2.5
+VFIX1=36
+VFIX2=36
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Vi-Vo-%	255	XAxis=U	YAxis=L	Vi=abs(Vbe)	Vo=abs(Vce-Vbe)	001100
+Note=Vin connect E,Vout connect C,GND connect B.Were used to measure the curve of Vi-Vo and Vi->quiescent current curve. If you need to change the load current, you can choose the different RC, or change the Vc voltage.
+
+[  79xx Io-Vo Curve]
+RB=0
+RC=1
+MAINMODETYPE=1
+MODETYPE=1
+VMIN=5
+VMAX=36
+VFIX1=25
+VFIX2=2.5
+VSTEP=0.5
+IMAX=2500
+CurrentSwitch=0
+SeriesDefine0=Io-Vo-%	255	XAxis=U	YAxis=L	I=abs(Ic)	Vo=abs(Vce-Vbe)	000000
+Note=Vin connect E,Vout connect C,GND connect B.
+
+[{Two terminal device}]
+[  bidirectional VI Curve]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=-18
+VMAX=18
+VFIX1=0
+VFIX2=2
+VSTEP=0.5
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=CE-%	-1	XAxis=U	YAxis=L	V=Vce	I=Ic	000000
+Note=Points do not have positive and negative, respectively, of CE, but the maximum measured voltage -18V to +18 V.
+
+[  Zener VI Curve]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=0
+VFIX2=2
+VSTEP=0.5
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=Zener-%	-1	XAxis=U	YAxis=L	V=Vce	I=Ic	000000
+Note=Cathode connected C,negative to E, the maximum measurement range is 36V.
+
+[  Diode Logarithmic VI]
+RB=3
+RC=2
+MAINMODETYPE=0
+MODETYPE=1
+VMIN=0
+VMAX=36
+VFIX1=0
+VFIX2=2
+VSTEP=0.5
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=Log_Diode	-1	XAxis=U	YAxis=L	V=Vce	I=ln(abs(Ic))	000000
+Note=Cathode connected C,negative to E,Y-Axis is Logarithmic of current(mA).
+
+
+[{Special }]
+[  SCR trigger test]
+RB=0
+RC=0
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=3
+VMAX=10
+VFIX1=30
+VFIX2=3
+VSTEP=0.1
+IMAX=20
+CurrentSwitch=0
+SeriesDefine0=SCR	-1	XAxis=U	YAxis=L	V=Vbe	I=Ic	011000
+Note=Cathode connect C,negative to E, control connect a more then 1u Electrolytic capacitor to C
+
+[  Simulation sin curve]
+RB=3
+RC=3
+MAINMODETYPE=1
+MODETYPE=0
+VMIN=0
+VMAX=2
+VFIX1=0.1
+VFIX2=0.1
+VSTEP=0.01
+IMAX=300
+CurrentSwitch=0
+SeriesDefine0=Sin	-1	XAxis=U	YAxis=L	X=Number	Y=sin(6.28*Number/200)	000000
+Note=This is a demonstration of a curve formula usage
