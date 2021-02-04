@@ -43,7 +43,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=P Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
-Note=~
+Note=
 
 [PNP Vbe-Ic(Vce NoFix)]
 RB=3
@@ -58,7 +58,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=P Vbe-Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
-Note=~
+Note=
 
 [PNP Vce-Ic]
 RB=1
@@ -73,7 +73,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=P Vce-Ic-%	-1	XAxis=U	YAxis=L	Vce=abs(Vce)	Ic=abs(Ic)	001010
-Note=~
+Note=
 
 [{ NPN }]
 
@@ -120,7 +120,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=N Hfe-Ic-%	-1	XAxis=U	YAxis=L	I=abs(Ic)	Hfe=abs(Ic/Ib)	010010
-Note=~
+Note=
 
 [NPN Vbe-Ic(Vce NoFix)]
 RB=3
@@ -135,7 +135,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=N Vbe-Ic-%	-1	XAxis=U	YAxis=L	Vbe=abs(Vbe)	Ic=abs(Ic)	010010
-Note=~
+Note=
 
 [NPN Vce-Ic]
 RB=1
@@ -150,7 +150,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=N Vce-Ic-%	-1	XAxis=U	YAxis=L	Vce=abs(Vce)	Ic=abs(Ic)	001010
-Note=Output curve at constant Ib. If you require multiple curves then please modify Ib and repeat.
+Note=Output curve at constant Ib. If you require multiple curves then modify Ib and repeat.
 
 [{ PMOS }]
 
@@ -167,7 +167,7 @@ VSTEP=0.1
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=P Vgs-Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
-Note=Measures Vgs-Id curve at constant Vds. Input characteristic curve AKA transfer curve is a standard datasheet measurement.
+Note=Measures Vgs-Id curve at constant Vds. 
 
 [PMOS Vgs-Id(Vce NoFix)]
 RB=1
@@ -182,7 +182,7 @@ VSTEP=0.1
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=P Vgs-Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
-Note=~
+Note=
 
 [PMOS Vds-Id]
 RB=1
@@ -197,7 +197,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=P Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
-Note=Measures output curve at constant Vgs. If you require multiple curves then please modify Vgs and repeat.
+Note=Measures output curve at constant Vgs. If you require multiple curves then modify Vgs and repeat.
 
 [{ NMOS }]
 
@@ -214,7 +214,7 @@ VSTEP=0.1
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=N Vgs-Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
-Note=Measures Vgs-Id curve at constant Vds. Input characteristic curve AKA transfer curve is a standard datasheet measurement.
+Note=Measures Vgs-Id curve at constant Vds. 
 
 [NMOS Vgs-Id(Vce NoFix)]
 RB=1
@@ -229,7 +229,7 @@ VSTEP=0.1
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=N Vgs-Id-%	-1	XAxis=U	YAxis=L	Vgs=abs(Vbe)	Id=abs(Ic)	010010
-Note=~
+Note=
 
 [NMOS Vds-Id]
 RB=1
@@ -244,7 +244,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=N Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
-Note=Measures output curve at constant Vgs. If you require multiple curves then please modify Vgs and repeat.
+Note=Measures output curve at constant Vgs. If you require multiple curves then modify Vgs and repeat.
 
 [{ P-JFET }]
 
@@ -261,7 +261,7 @@ VSTEP=0.1
 IMAX=60
 CurrentSwitch=0
 SeriesDefine0=P Vgs-Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
-Note=Measures Vgs-Id curve at constant Vds. Input characteristic curve AKA transfer curve is a standard datasheet measurement.
+Note=Measures Vgs-Id curve at constant Vds. 
 
 [P-JFET Vgs-Id(Vce NoFix)]
 RB=1
@@ -276,7 +276,7 @@ VSTEP=0.1
 IMAX=600
 CurrentSwitch=0
 SeriesDefine0=P Vgs-Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
-Note=~
+Note=
 
 [P-JFET Vds-Id]
 RB=1
@@ -291,7 +291,7 @@ VSTEP=0.5
 IMAX=60
 CurrentSwitch=0
 SeriesDefine0=P Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
-Note=Measures output curve at constant Vgs. If you require multiple curves then please modify Vgs and repeat.
+Note=Measures output curve at constant Vgs. If you require multiple curves then modify Vgs and repeat.
 
 [{ N-JFET }]
 
@@ -308,7 +308,7 @@ VSTEP=0.1
 IMAX=30
 CurrentSwitch=0
 SeriesDefine0=N Vgs-Id-%	-1	XAxis=U	YAxis=L	Vgs=Vbe	Id=abs(Ic)	010010
-Note=Measures Vgs-Id curve at constant Vds. Input characteristic curve AKA transfer curve is a standard datasheet measurement.
+Note=Measures Vgs-Id curve at constant Vds.
 
 [N-JFET Vgs-Id(Vce NoFix)]
 RB=1
@@ -338,11 +338,11 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=N Vds-Id-%	-1	XAxis=U	YAxis=L	Vds=abs(Vce)	Id=abs(Ic)	100010
-Note=Measures output curve at constant Vgs. If you require multiple curves then please modify Vgs and repeat.
+Note=Measures output curve at constant Vgs. If you require multiple curves then modify Vgs and repeat.
 
 [{ Positive regulator }]
 
-[78xxVi-Vo curve]
+[78xx Vi-Vo curve]
 RB=0
 RC=1
 MAINMODETYPE=1
@@ -356,7 +356,7 @@ IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=Vi-Vo-%	255	XAxis=U	YAxis=L	Vi=abs(Vbe)	Vo=abs(Vce-Vbe)	000000
 SeriesDefine1=Vi-Is(R)-%	0	XAxis=U	YAxis=R	Vi=abs(Vbe)	Is=abs(Ib)	000000
-Note=Connect Input terminal to E, Output terminal to C, Common terminal to B. The Vi-Vo transfer curve and Vi-Common quiescent current curve are measured. To change the load current select a different RC or modify Vc.
+Note=Vin to E, Vout to C, Common terminal to B. The Vi-Vo transfer curve and Vi-quiescent current curve are measured. To change the load current select a different RC or modify Vc.
 
 [78xx Io-Vo curve]
 RB=0
@@ -371,11 +371,11 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=Io-Vo-%	255	XAxis=U	YAxis=L	I=abs(Ic)	Vo=abs(Vce-Vbe)	000000
-Note=Connect Input terminal to E, Output terminal to C, Common terminal to B.
+Note=Vin to E, Vout to C, Common terminal to B.
 
 [{ Negative regulator }]
 
-[79xxVi-Vo curve]
+[79xx Vi-Vo curve]
 RB=0
 RC=1
 MAINMODETYPE=1
@@ -389,7 +389,7 @@ IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=Vi-Vo-%	255	XAxis=U	YAxis=L	Vi=abs(Vbe)	Vo=abs(Vce-Vbe)	001100
 SeriesDefine1=Vi-Is(R)-%	0	XAxis=U	YAxis=R	Vi=abs(Vbe)	Is=abs(Ib)	001100
-Note=Connect Input terminal to E, Output terminal to C, Common terminal to B. The Vi-Vo transfer curve and Vi-Common quiescent current curve are measured. To change the load current select a different RC or modify Vc.
+Note=Vin to E, Vout to C, Common terminal to B. The Vi-Vo transfer curve and Vi- quiescent current curve are measured. To change the load current select a different RC or modify Vc.
 
 [79xx Io-Vo curve]
 RB=0
@@ -404,7 +404,7 @@ VSTEP=0.5
 IMAX=2500
 CurrentSwitch=0
 SeriesDefine0=Io-Vo-%	255	XAxis=U	YAxis=L	I=abs(Ic)	Vo=abs(Vce-Vbe)	000000
-Note=Connect Input terminal to E, Output terminal to C, Common terminal to B.
+Note=Vin to E, Vout to C, Common terminal to B.
 
 [{ Two terminal device }]
 
@@ -421,7 +421,7 @@ VSTEP=0.5
 IMAX=300
 CurrentSwitch=0
 SeriesDefine0=CE 2term-%	-1	XAxis=U	YAxis=L	V=Vce	I=Ic	000000
-Note=Connect DUT between C and E without regard to polarity. Measurement voltage is limited to +/-18V max.
+Note=Connect between C and E. Measurement voltage is limited to +/-18V max.
 
 [Zener diode VI curve]
 RB=3
@@ -468,9 +468,9 @@ VSTEP=0.1
 IMAX=20
 CurrentSwitch=0
 SeriesDefine0=Thyristor-%	-1	XAxis=U	YAxis=L	V=Vbe	I=Ic	011000
-Note=Connect Anode to C, Cathode to E, Control terminal via a capacitor >1uF to B. Polarity is B+Capacitor-DUT.
+Note=Connect Anode to C, Cathode to E, Control terminal via a capacitor >1uF to B. the capacitor polarity is B+.
 
-[Sine curve]
+[Show Sine curve example]
 RB=3
 RC=3
 MAINMODETYPE=1
@@ -483,7 +483,7 @@ VSTEP=0.01
 IMAX=300
 CurrentSwitch=0
 SeriesDefine0=Sine-%	-1	XAxis=U	YAxis=L	X=Number	Y=sin(6.28*Number/200)	000000
-Note=Example showing how to use a curve formula.
+Note=Example showing how to draw a curve with formula.
 
 [Mirror -> Ic tracks Ib scenario]
 RB=1
@@ -498,4 +498,4 @@ VSTEP=0.5
 IMAX=300
 CurrentSwitch=0
 SeriesDefine0=i	-1	XAxis=U	YAxis=L	I=Ib	Radio=Ib/Ic	001110
-Note=~
+Note=
