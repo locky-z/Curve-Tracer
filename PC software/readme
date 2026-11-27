@@ -1,3 +1,12 @@
+
+PC software.zip图示仪程序
+CH341SER.exe  USB接口芯片CH340驱动程序。
+PL2303_Prolific_DriverInstaller_v1.5.0   USB接口芯片PL2303HX驱动程序
+Script example.zip  测量脚本例子。
+图示仪软件使用手册.doc
+配置参数说明.doc
+
+
 1.根据USB芯片，安装USB驱动pl2303或者ch340。
 注意：早期pl2303芯片不兼容win10，需要安装1.5版本的pl2303驱动。但装完1.5版本后，win10会再后台又自动将1.5版驱动更新成高版本，导致驱动有叹号，可以回滚回1.5版。
 
